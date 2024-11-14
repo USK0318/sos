@@ -4,7 +4,7 @@ const router = express.Router();
 
 // Example route
 router.get('/', (req, res) => {
-    res.render('hi');
+    res.send('Welcome to the home page!');
 });
 
 // Another example route
