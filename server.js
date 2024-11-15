@@ -3,7 +3,7 @@ const app = express();
 const routs = require('./routes');
 
 app.get('/', (req, res) => {
-    res.render('hi.hbs');
+    res.send('Welcome to the API');
 });
 
 app.use('/api', routs);
