@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 
 // Another example route
 router.get('/about', (req, res) => {
-    res.send('About page');
+    res.render('./views/about.html');
 });
 
 module.exports = router;
