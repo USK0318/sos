@@ -3,7 +3,7 @@ const app = express();
 const routs = require('./routes');
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the home page!');
+    res.render('hi.hbs');
 });
 
 app.use('/api', routs);
