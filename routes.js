@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 
 // Another example route
 router.get('/about', (req, res) => {
-    res.render('./views/about.html');
+    res.redirect('https://www.google.com');
 });
 
 module.exports = router;
