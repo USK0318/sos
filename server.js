@@ -117,6 +117,7 @@ app.get('/get/:code', async (req, res) => {
             return res.status(404).json({ message: 'Your Data is not found' });
         }
         res.status(200).json(data);
+        
         setTimeout(async () => {
             try {
                 await deleteFile(data.file);
