@@ -70,7 +70,7 @@ const DataTransfer = mongoose.model('DataTransfer', dataTransferSchema);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hello !');
 });
 
 app.post('/post', async (req, res) => {
@@ -95,7 +95,7 @@ app.post('/post', async (req, res) => {
         // Handle file upload
         const fileUrl = await handleFileUpload(filea, 'files');
         if (!fileUrl) {
-            return res.status(500).json({ message: 'File upload failed sai' });
+            return res.status(500).json({ message: 'File upload failed sai', fileUrl });
         }
         // Save data to MongoDB
         const data = new DataTransfer({ code, file: fileUrl });
