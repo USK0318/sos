@@ -79,7 +79,7 @@ app.post('/post', async (req, res) => {
             return res.status(400).json({ message: 'No file uploaded' });
         }
 
-        const filex = req.files.filex; // Retrieve the file
+        const filea = req.files.filex; // Retrieve the file
 
         // Generate a unique code
         let code;
@@ -92,9 +92,9 @@ app.post('/post', async (req, res) => {
             }
         }
         // Handle file upload
-        const fileUrl = await handleFileUpload(filex, 'files');
+        const fileUrl = await handleFileUpload(filea, 'files');
         if (!fileUrl) {
-            return res.status(500).json({ message: 'File upload failed' });
+            return res.status(500).json({ message: 'File upload failed sai' });
         }
         // Save data to MongoDB
         const data = new DataTransfer({ code, file: fileUrl });
